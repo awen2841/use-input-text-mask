@@ -1,6 +1,6 @@
 {
   "name": "use-input-text-mask",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "types": "index.d.ts",
   "author": "Alexsandr Serduck",
@@ -18,7 +18,7 @@
     "dist"
   ],
   "repository": {
-    "url": "https://github.com/awen2841/use-text-mask"
+    "url": "https://github.com/awen2841/use-input-text-mask"
   },
   "scripts": {
     "lint": "eslint src/",

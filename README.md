@@ -1,7 +1,7 @@
 # useTextMask
 
 -----
-[![npm](https://img.shields.io/npm/v/?style=flat)](https://www.npmjs.com/package/)
+[![npm](https://img.shields.io/npm/v/use-input-text-mask?style=flat)](https://www.npmjs.com/package/use-input-text-mask)
 -----
 
 ## Installation
@@ -9,11 +9,11 @@
 #### Yarn
 
 ```bash
-yarn add 
+yarn add use-input-text-mask
 ```
 
 #### NPM
 
 ```bash
-npm install 
+npm install use-input-text-mask
 ```
