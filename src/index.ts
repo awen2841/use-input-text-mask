@@ -1,2 +1,2 @@
-export * from './useTextMask';
+export * from './useInputTextMask';
 export * from './types';

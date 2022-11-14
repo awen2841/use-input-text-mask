@@ -1,7 +1,7 @@
 import { ChangeEventHandler, RefObject } from 'react';
 import { Mask } from './utils';
 
-export interface IUseTextMask {
+export interface IUseInputTextMask {
 	ref: RefObject<HTMLInputElement>;
 	maskPlaceholder: string;
 	currentMask: Mask;

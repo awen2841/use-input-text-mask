@@ -1,9 +1,9 @@
 import { ChangeEvent, useRef } from 'react';
 import { DEFAULT_PLACEHOLDER_CHAR } from './constants';
 import { convert, parsValue, convertMaskToPlaceholder, getSelectionRange, Mask, Range } from './utils';
-import { IOptions, IUseTextMask } from './types';
+import { IOptions, IUseInputTextMask } from './types';
 
-export const useTextMask = ({ mask, placeholderChar = DEFAULT_PLACEHOLDER_CHAR }: IOptions): IUseTextMask => {
+export const useInputTextMask = ({ mask, placeholderChar = DEFAULT_PLACEHOLDER_CHAR }: IOptions): IUseInputTextMask => {
 	const ref = useRef<HTMLInputElement | null>(null);
 
 	const _mask = useRef<Mask>(mask);
