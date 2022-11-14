@@ -10,3 +10,4 @@ Thumbs.db
 .jest-cache
 src/external/built-context/context_*
 compiled-context
+/yarn.lock

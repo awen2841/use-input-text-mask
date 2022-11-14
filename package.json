@@ -8,7 +8,7 @@
   "private": false,
   "keywords": [],
   "repository": {
-    "url": ""
+    "url": "https://github.com/awen2841/use-text-mask"
   },
   "scripts": {
     "lint": "eslint src/",
