@@ -1,0 +1,61 @@
+{
+  "name": "use-text-mask",
+  "version": "0.0.1",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "author": "Alexsandr Serduck",
+  "license": "MIT",
+  "private": false,
+  "keywords": [],
+  "repository": {
+    "url": ""
+  },
+  "scripts": {
+    "lint": "eslint src/",
+    "lint:write": "eslint src/ --fix",
+    "build": "sh scripts/build.sh",
+    "test": "jest --config ./jest.config.js"
+  },
+  "devDependencies": {
+    "@types/react": "16.9.56",
+    "@types/react-dom": "16.9.9",
+    "@types/glob": "7.1.2",
+    "@types/line-column": "1.0.0",
+    "@types/lodash": "4.14.169",
+    "@types/node": "14.0.27",
+    "@types/webpack": "5.28.0",
+    "@types/jest": "28.1.2",
+    "@types/sinon": "10.0.11",
+    "prettier": "2.5.1",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-import": "2.25.2",
+    "eslint-plugin-jest-dom": "4.0.2",
+    "eslint-plugin-jsx-a11y": "6.4.1",
+    "eslint-plugin-prettier": "3.1.0",
+    "eslint-plugin-react": "7.26.1",
+    "eslint-plugin-react-hooks": "4.2.0",
+    "@typescript-eslint/eslint-plugin": "5.3.1",
+    "@typescript-eslint/parser": "5.3.1",
+    "react": "16.10.2",
+    "jest": "28.1.1",
+    "sinon": "12.0.1",
+    "ts-jest": "28.0.5",
+    "concurrently": "7.5.0",
+    "dts-bundle-generator": "^7.0.0",
+    "typescript": "4.4.4",
+    "ts-auto-mock": "3.5.0",
+    "jest-ts-auto-mock": "2.0.0",
+    "ttypescript": "1.5.13"
+  },
+  "peerDependencies": {
+    "typescript": "4.X.X",
+    "react": "16.x"
+  },
+  "dependencies": {
+    "glob": "7.1.6",
+    "json-beautify": "1.1.1",
+    "line-column": "1.0.2",
+    "lodash": "4.17.21"
+  }
+}
