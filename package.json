@@ -1,6 +1,6 @@
 {
   "name": "use-input-text-mask",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "main": "index.js",
   "types": "index.d.ts",
   "author": "Alexsandr Serduck",
@@ -45,6 +45,9 @@
     "eslint-plugin-react-hooks": "4.2.0",
     "@typescript-eslint/eslint-plugin": "5.3.1",
     "@typescript-eslint/parser": "5.3.1",
+    "glob": "7.1.6",
+    "json-beautify": "1.1.1",
+    "line-column": "1.0.2",
     "react": "16.10.2",
     "jest": "28.1.1",
     "sinon": "12.0.1",
@@ -61,9 +64,6 @@
     "react": "16.x"
   },
   "dependencies": {
-    "glob": "7.1.6",
-    "json-beautify": "1.1.1",
-    "line-column": "1.0.2",
     "lodash": "4.17.21"
   }
 }
