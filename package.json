@@ -14,7 +14,9 @@
     "text formatting",
     "string formatting"
   ],
+  "homepage": "https://",
   "repository": {
+    "type": "git",
     "url": "https://github.com/awen2841/use-input-text-mask"
   },
   "scripts": {

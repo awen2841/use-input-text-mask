@@ -1,0 +1,13 @@
+dist
+/tmp
+/out-tsc
+node_modules
+.idea
+npm-debug.log
+yarn-error.log
+.jest-cache
+/yarn.lock
+/components/Icon/glyphs.ts
+/components/Icon/icons.ts
+/build-storybook.log
+/storybook-static/

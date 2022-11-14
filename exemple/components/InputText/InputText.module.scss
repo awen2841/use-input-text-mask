@@ -1,0 +1,251 @@
+@import "styles/scss/colors";
+@import "styles/scss/mixins/index";
+@import "styles/scss/typography";
+@import "styles/scss/functions";
+@import "styles/scss/transitions";
+
+$sizes: (
+  'sm': (
+    "min-height": 40px,
+    "padding": 0 12px,
+    "padding-left-with-leading": 40px,
+    "padding-left-with-trailing": 46px,
+    "border-radius": 4px,
+    "leading-right-margin": 0px,
+    "trailing-right-margin": 0px,
+  ),
+  'md': (
+    "min-height": 48px,
+    "padding": 0 16px,
+    "padding-left-with-leading": 42px,
+    "padding-left-with-trailing": 50px,
+    "border-radius": 4px,
+    "leading-right-margin": 4px,
+    "trailing-right-margin": 4px,
+  ),
+  'lg': (
+    "min-height": 64px,
+    "padding": 0 24px,
+    "padding-left-with-leading": 50px,
+    "padding-left-with-trailing": 58px,
+    "border-radius": 4px,
+    "leading-right-margin": 12px,
+    "trailing-right-margin": 12px,
+  ),
+);
+
+$appearances: (
+  gray_soft: (
+    "text-color-static": $gray-dark,
+    "text-color-disabled": $gray-soft,
+    "placeholder-color-static": $gray,
+    "placeholder-color-disabled": $gray,
+    "border-color-static": $gray-soft,
+    "border-color-hover": $blue-hover,
+    "border-color-focus": $blue-active,
+    "border-color-disabled": $gray-soft,
+    "outline-color-focus": rgba($blue-static, 0.3),
+    "background-color-disabled": rgba($gray-light, 0.3),
+  ),
+  /* Error styles */
+  red: (
+    "text-color-static": $gray-dark,
+    "border-color-static": $red-static,
+    "border-color-hover": $red-hover,
+    "border-color-focus": $red-active,
+    "outline-color-focus": rgba($red-active, 0.3),
+  ),
+);
+
+.input {
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none !important;
+
+  @include placeholder {
+    opacity: 1;
+    text-overflow: ellipsis;
+  }
+
+  &:focus { outline: none !important }
+
+  &:disabled {
+    opacity: 1;
+    cursor: not-allowed;
+  }
+
+  &::-webkit-search-cancel-button { -webkit-appearance: none }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    margin: 0;
+    -webkit-appearance: none;
+  }
+
+  &[type="search"] {
+    &::-ms-clear {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+
+    &::-ms-reveal {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+  }
+}
+
+.wrapper {
+  z-index: 1; /* with this box-shadow will be higher than other elements */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    color: $black;
+    margin-bottom: 12px;
+    font: $input-label-font;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  input {
+    width: 100%;
+    font: $font16;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    min-height: inherit;
+    line-height: normal;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    background-color: transparent;
+    transition: color $transition,
+    box-shadow $transition,
+    border-color $transition,
+    background-color $transition;
+  }
+
+  /* @Sizes */
+  @each $key, $value in $sizes {
+    &_size_#{$key} {
+      min-height: get-in($sizes, $key, "min-height");
+
+      .mask_container {
+        padding: get-in($sizes, $key, "padding");
+      }
+
+      input {
+        padding: get-in($sizes, $key, "padding");
+        border-radius: get-in($sizes, $key, "border-radius");
+      }
+
+      &_with_render_leading input, &_with_render_leading .mask_container {
+        padding-left: get-in($sizes, $key, "padding-left-with-leading");
+      }
+
+      &_with_render_trailing input, &_with_render_trailing .mask_container {
+        padding-right: get-in($sizes, $key, "padding-left-with-trailing");
+      }
+    }
+  }
+
+  /* Appearance */
+  @each $key, $value in $appearances {
+    &_appearance_#{''+$key+''} {
+      input {
+        color: get-in($appearances, $key, "text-color-static");
+        border-color: get-in($appearances, $key, "border-color-static");
+
+        @include placeholder {
+          color: get-in($appearances, $key, "placeholder-color-static");
+        }
+
+        &:hover:not(:focus):not(:read-only):not(:disabled) {
+          border-color: get-in($appearances, $key, "border-color-hover");
+        }
+
+        &:focus:not(:read-only) {
+          border-color: get-in($appearances, $key, "border-color-focus");
+          box-shadow: 0 0 0 3px get-in($appearances, $key, "outline-color-focus");
+        }
+
+        &:disabled {
+          border-color: get-in($appearances, $key, "border-color-disabled");
+          background-color: get-in($appearances, $key, "background-color-disabled");
+
+          @include placeholder {
+            color: get-in($appearances, $key, "placeholder-color-disabled");
+          }
+        }
+      }
+    }
+  }
+}
+
+.container {
+  min-height: inherit;
+  position: relative;
+}
+
+.leading {
+  top: 50%;
+  left: 0;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  justify-content: center;
+  transform: translateY(-50%);
+
+  @each $key, $value in $sizes {
+    &_size_#{$key} {
+      margin-left: get-in($sizes, $key, "trailing-right-margin");
+    }
+  }
+}
+
+.trailing {
+  top: 50%;
+  right: 0;
+  position: absolute;
+  transform: translateY(-50%);
+
+  @each $key, $value in $sizes {
+    &_size_#{$key} {
+      margin-right: get-in($sizes, $key, "trailing-right-margin");
+    }
+  }
+}
+
+.mask_container {
+  font: $font16;
+  color: rgba($gray, .5);
+  position: absolute;
+  top: 1px;
+  bottom: 0;
+  left: 1px;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+}
+
+.error {
+  font: $font14;
+  color: $red-static;
+  margin-top: 8px;
+}
+
+.sub_label {
+  color: $gray;
+  font: $font14;
+  margin-top: 4px;
+}

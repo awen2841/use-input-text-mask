@@ -1,0 +1,23 @@
+$sizes: (
+  xs: 16px,
+  sm: 20px,
+  md: 24px,
+  lg: 32px,
+  xlg: 40px,
+);
+
+.icon {
+  fill: #7f8b99;
+
+  /* Sizes */
+  @each $key, $value in $sizes {
+    &_size_#{''+$key+''} {
+      min-width: map-get($sizes, $key);
+      min-height: map-get($sizes, $key);
+
+      width: map-get($sizes, $key);
+      height: map-get($sizes, $key);
+    }
+  }
+}
+

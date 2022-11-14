@@ -1,0 +1,60 @@
+$breakpointsDiff: 0.02px;
+
+$breakpoints-min: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 992px,
+  xl: 1024px,
+  xxl: 1440px
+);
+
+$breakpoints-max: (
+  xs: map-get($breakpoints-min, "sm") - $breakpointsDiff,
+  sm: map-get($breakpoints-min, "md") - $breakpointsDiff,
+  md: map-get($breakpoints-min, "lg") - $breakpointsDiff,
+  lg: map-get($breakpoints-min, "xl") - $breakpointsDiff,
+  xl: map-get($breakpoints-min, "xxl") - $breakpointsDiff
+);
+
+@mixin breakpoint-up($breakpoint) {
+  @if map-has-key($breakpoints-min, $breakpoint) {
+    @media (min-width: map-get($breakpoints-min, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-down($breakpoint) {
+  @if map-has-key($breakpoints-max, $breakpoint) {
+    @media (max-width: map-get($breakpoints-max, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint-only($breakpoint) {
+  @if map-has-key($breakpoints-max, $breakpoint) {
+    @if map-has-key($breakpoints-min, $breakpoint) {
+      @media (min-width: map-get($breakpoints-min, $breakpoint)) and (max-width: map-get($breakpoints-max, $breakpoint)) {
+        @content;
+      }
+    } @else {
+      @media (max-width: $breakpoint) {
+        @content;
+      }
+    }
+  } @else {
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}

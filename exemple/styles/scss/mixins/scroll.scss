@@ -1,0 +1,20 @@
+@import '../colors';
+
+@mixin useCustomScroll {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba($gray-dark, .3);
+    border-radius: 4.5px;
+
+    &:hover {
+      background: rgba($gray-dark, .4);
+    }
+  }
+}

@@ -1,0 +1,3 @@
+@function get-in($name, $key, $value: bg) {
+  @return map-get(map-get($name, $key), $value);
+}

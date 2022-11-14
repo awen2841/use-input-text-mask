@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+:global {
+  #root {
+    box-sizing: border-box;
+    margin: auto;
+    padding: 1rem;
+    max-height: 100%;
+  }
+}

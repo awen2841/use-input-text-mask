@@ -1,0 +1,10 @@
+@import "./breakpoints";
+
+/* Get desired title */
+@mixin use-title($title) {
+  font: map-get($title, "mobile");
+
+  @include breakpoint-up("md") {
+    font: map-get($title, "desktop");
+  }
+}

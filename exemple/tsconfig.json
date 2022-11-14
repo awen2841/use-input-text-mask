@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": "./",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "outDir": "../../dist/out-tsc",
+    "types": ["node"]
+  },
+  "files": [
+    "./dts/cssmodule.d.ts",
+    "./dts/image.d.ts",
+  ],
+  "include": ["**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+  "references": [],
+  "exclude": [
+    "node_modules"
+  ]
+}
