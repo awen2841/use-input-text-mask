@@ -6,7 +6,17 @@
   "author": "Alexsandr Serduck",
   "license": "MIT",
   "private": false,
-  "keywords": [],
+  "keywords": [
+    "text mask",
+    "input mask",
+    "string mask",
+    "input formatting",
+    "text formatting",
+    "string formatting"
+  ],
+  "files": [
+    "dist"
+  ],
   "repository": {
     "url": "https://github.com/awen2841/use-text-mask"
   },
