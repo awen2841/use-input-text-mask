@@ -1,6 +1,6 @@
 {
   "name": "use-input-text-mask",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "index.js",
   "types": "index.d.ts",
   "author": "Alexsandr Serduck",
@@ -22,7 +22,7 @@
     "lint:write": "eslint src/ --fix",
     "build": "sh scripts/build.sh",
     "test": "jest --config ./jest.config.js",
-    "publish": "cd /dist && sudo npm publish"
+    "publish": "cd dist && sudo npm publish"
   },
   "devDependencies": {
     "@types/react": "16.9.56",
