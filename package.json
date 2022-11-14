@@ -1,6 +1,6 @@
 {
   "name": "use-input-text-mask",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.js",
   "types": "index.d.ts",
   "author": "Alexsandr Serduck",
