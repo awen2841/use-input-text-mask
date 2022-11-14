@@ -48,4 +48,4 @@ To see an example of the code running, follow these steps:
 1. `npm run storybook`
 1. Open [http://localhost:6006](http://localhost:6006)
 
-The code of the example is in [`exemple`](https://).
+The code of the example is in [`exemple`](https://6372c335d0a5ed54837bf503-vqkenkaghv.chromatic.com/).
