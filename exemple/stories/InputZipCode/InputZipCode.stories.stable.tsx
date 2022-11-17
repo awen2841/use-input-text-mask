@@ -4,17 +4,17 @@ import { useInputTextMask } from 'use-input-text-mask';
 import { InputText } from '../../components/InputText';
 
 export default {
-	title: 'Input',
+	title: 'InputZipCode',
 	parameters: {
 		component: InputText,
 	},
 	decorators: [withKnobs],
 };
 
-export const InputPhoneMask = (): JSX.Element => {
+export const InputZipCodeMask = (): JSX.Element => {
 	const [inputValue, setInputValue] = useState<string>('');
 
-	const mask = ['+', '1', ' ', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
+	const mask = [/\d/, /\d/, /\d/, /\d/, /\d/];
 
 	const { ref: inputRef, maskPlaceholder, onChange, getValue } = useInputTextMask({ mask });
 
