@@ -1,4 +1,5 @@
 import { ChangeEvent, useRef } from 'react';
+import isNull from 'lodash/isNull';
 import { DEFAULT_PLACEHOLDER_CHAR } from './constants';
 import { convert, parsValue, convertMaskToPlaceholder, getSelectionRange, Mask, Range } from './utils';
 import { IOptions, IUseInputTextMask } from './types';
@@ -17,7 +18,7 @@ export const useInputTextMask = ({ mask, placeholderChar = DEFAULT_PLACEHOLDER_C
 
 		const { selectionStart, selectionEnd } = ref.current;
 
-		if (!selectionStart || !selectionEnd) {
+		if (isNull(selectionStart) || isNull(selectionEnd)) {
 			return null;
 		}
 
