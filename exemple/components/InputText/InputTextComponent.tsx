@@ -60,8 +60,8 @@ const InputTextComponent: React.FC<IInputTextProps> = ({
 			)}
 			<div className={_containerClassName}>
 				{renderLeading && <div className={_renderLeadingClassName}>{React.cloneElement(renderLeading)}</div>}
-				{mask && <span className={css.mask_container}>{mask}</span>}
 				<input id={id} className={cx(css.input, className)} ref={componentRef} {...props} />
+				{mask && <span className={css.mask_container}>{mask}</span>}
 				{renderTrailing && React.cloneElement(renderTrailing, { className: _renderTrailingClassName })}
 			</div>
 			{error && <p className={_errorClassName}>{error}</p>}

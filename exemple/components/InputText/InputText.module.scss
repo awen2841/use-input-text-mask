@@ -131,7 +131,11 @@ $appearances: (
     background-color $transition;
   }
 
-  /* @Sizes */
+  input:placeholder-shown + .mask_container {
+    display: none;
+  }
+
+    /* @Sizes */
   @each $key, $value in $sizes {
     &_size_#{$key} {
       min-height: get-in($sizes, $key, "min-height");
