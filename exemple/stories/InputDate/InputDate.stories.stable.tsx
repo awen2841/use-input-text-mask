@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useState } from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import { useInputTextMask } from 'use-input-text-mask';
+import { isValidate, useInputTextMask } from 'use-input-text-mask';
 import { InputText } from '../../components/InputText';
 
 export default {
@@ -16,7 +16,7 @@ export const InputDateMask = (): JSX.Element => {
 
 	const mask = [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/];
 
-	const { ref: inputRef, maskPlaceholder, onChange, getValue } = useInputTextMask({ mask });
+	const { ref: inputRef, maskPlaceholder, currentMask, onChange, getValue } = useInputTextMask({ mask });
 
 	const handleChange = (event: ChangeEvent<HTMLInputElement>): void => {
 		onChange(event);
@@ -31,6 +31,7 @@ export const InputDateMask = (): JSX.Element => {
 			<InputText type="tel" mask={maskPlaceholder} componentRef={inputRef} onChange={handleChange} />
 			<p style={{ margin: '8px 0' }}>{`Input value: ${inputValue}`}</p>
 			<p style={{ margin: '8px 0' }}>{`CurrentValue: ${value}`}</p>
+			<p style={{ margin: '8px 0' }}>{`isValidate: ${isValidate(value, currentMask)}`}</p>
 		</div>
 	);
 };
