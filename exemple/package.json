@@ -17,7 +17,7 @@
     "svgo-loader": "^2.2.1",
     "svg-sprite-loader": "6.0.11",
     "sass-loader": "10.1.1",
-    "use-input-text-mask": "^0.0.7"
+    "use-input-text-mask": "link:../src"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
