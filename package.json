@@ -1,6 +1,6 @@
 {
   "name": "use-input-text-mask",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "main": "index.js",
   "types": "index.d.ts",
   "author": "Alexsandr Serduck",
@@ -14,7 +14,7 @@
     "text formatting",
     "string formatting"
   ],
-  "homepage": "https://6372c335d0a5ed54837bf503-vqkenkaghv.chromatic.com",
+  "homepage": "https://6372c335d0a5ed54837bf503-gsngqmfplv.chromatic.com/",
   "repository": {
     "type": "git",
     "url": "https://github.com/awen2841/use-input-text-mask"

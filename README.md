@@ -46,6 +46,6 @@ To see an example of the code running, follow these steps:
 1. `cd use-input-text-mask/exemple`
 1. `npm install`
 1. `npm run storybook`
-1. Open [http://localhost:6006](http://localhost:6006)
+1. Open [http://localhost:6005](http://localhost:6005)
 
-The code of the example is in [`exemple`](https://6372c335d0a5ed54837bf503-vqkenkaghv.chromatic.com/).
+The code of the example is in [`exemple`](https://6372c335d0a5ed54837bf503-gsngqmfplv.chromatic.com/).
