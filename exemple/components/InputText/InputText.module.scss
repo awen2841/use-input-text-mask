@@ -44,7 +44,6 @@ $appearances: (
     "border-color-hover": $blue-hover,
     "border-color-focus": $blue-active,
     "border-color-disabled": $gray-soft,
-    "outline-color-focus": rgba($blue-static, 0.3),
     "background-color-disabled": rgba($gray-light, 0.3),
   ),
   /* Error styles */
@@ -173,7 +172,6 @@ $appearances: (
 
         &:focus:not(:read-only) {
           border-color: get-in($appearances, $key, "border-color-focus");
-          box-shadow: 0 0 0 3px get-in($appearances, $key, "outline-color-focus");
         }
 
         &:disabled {
